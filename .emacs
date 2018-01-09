@@ -1,10 +1,13 @@
 ;;;; BISHOPS PROXY
 
-(setq url-proxy-services
-      '(("http"     . "proxy.bws.wilts.sch.uk:8080")
-        ("https"    . "proxy.bws.wilts.sch.uk:8080")
-        ("ftp"      . "proxy.bws.wilts.sch.uk:8080")
-        ("no_proxy" . "^\\(localhost\\|10.*\\)")))
+(defun bishops-proxy ()
+  (setq url-proxy-services
+	'((http     . proxy.bws.wilts.sch.uk:8080)
+	  (https    . proxy.bws.wilts.sch.uk:8080)
+	  (ftp      . proxy.bws.wilts.sch.uk:8080)
+	  (no_proxy . ^\\(localhost\\|10.*\\)))
+	)
+  )
 
 ;;;; PERSONAL INFORMATION
 
