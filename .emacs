@@ -1,3 +1,11 @@
+;;;; BISHOPS PROXY
+
+(setq url-proxy-services
+      '(("http"     . "proxy.bws.wilts.sch.uk:8080")
+        ("https"    . "proxy.bws.wilts.sch.uk:8080")
+        ("ftp"      . "proxy.bws.wilts.sch.uk:8080")
+        ("no_proxy" . "^\\(localhost\\|10.*\\)")))
+
 ;;;; PERSONAL INFORMATION
 
 (setq user-full-name "Mark Williams"
@@ -133,7 +141,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yasnippet-snippets yasnippet org nov magit diminish evil use-package))))
+    (auto-complete rust-mode yasnippet-snippets yasnippet org nov magit diminish evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
