@@ -1,13 +1,24 @@
 ;;;; BISHOPS PROXY
 
-(defun bishops-proxy ()
-  (setq url-proxy-services
-	'(("http"     . "proxy.bws.wilts.sch.uk:8080")
-	  ("https"    . "proxy.bws.wilts.sch.uk:8080")
-	  ("ftp"      . "proxy.bws.wilts.sch.uk:8080")
-	  ("no_proxy" . "^\\(localhost\\|10.*\\)"))
-	)
-  )
+(defun bishops-proxy (n) (interactive "nOn/Off (1/0):")
+       (if (eq 1 n)
+	   (progn
+	     (setq url-proxy-services
+		   '(("http"     . "proxy.bws.wilts.sch.uk:8080")
+		     ("https"    . "proxy.bws.wilts.sch.uk:8080")
+		     ("ftp"      . "proxy.bws.wilts.sch.uk:8080")
+		     ("no_proxy" . "^\\(localhost\\|10.*\\)")))
+	     (message "Bishops proxy turned on.")
+	     )
+	 (progn
+	   (setq url-proxy-services
+		   '(("http"     . "")
+		     ("https"    . "")
+		     ("ftp"      . "")
+		     ("no_proxy" . "")))
+	     (message "Bishops proxy turned off.")
+	     )))
+
 
 ;;;; PERSONAL INFORMATION
 
