@@ -136,10 +136,6 @@
   (yas-global-mode 1)
   )
 
-;;;; GIT AND MAGIT
-
-(use-package magit)
-
 ;;;; Org Mode
 
 
@@ -153,9 +149,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (auto-complete rust-mode yasnippet-snippets yasnippet org nov magit diminish evil use-package))))
+ '(package-selected-packages (quote (haskell-emacs auto-complete diminish evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
